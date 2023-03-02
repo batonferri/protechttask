@@ -15,7 +15,7 @@ const Home = () => {
   const { me } = useUser();
 
   const { data: products } = useQuery(
-    "https://protechttaskapi.000webhostapp.com/product.php",
+    "http://localhost:80/api/product.php",
     { user_id: me.id },
     refetch
   );
