@@ -22,7 +22,7 @@ const EditModal = ({ setEditInfo, editInfo, userId, setRefetch }) => {
     }
     e.preventDefault();
     try {
-      await axios.put("http://localhost:80/api/product.php", {
+      await axios.put("https://protechttaskapi.000webhostapp.com/product.php", {
         ...inputs,
         id: editInfo.id,
         user_id: userId,

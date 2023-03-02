@@ -23,7 +23,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:80/api/register.php", inputs);
+      await axios.post(
+        "https://protechttaskapi.000webhostapp.com/register.php",
+        inputs
+      );
       navigate("/login");
     } catch (err) {
       setError(err.response.data);
