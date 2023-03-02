@@ -27,10 +27,13 @@ const Add = () => {
     }
     e.preventDefault();
     try {
-      await axios.post("http://localhost:80/api/product.php", {
-        ...inputs,
-        user_id: me.id,
-      });
+      await axios.post(
+        "https://protechttaskapi.000webhostapp.com/product.php",
+        {
+          ...inputs,
+          user_id: me.id,
+        }
+      );
       navigate("/");
     } catch (err) {
       setError(err.response.data);

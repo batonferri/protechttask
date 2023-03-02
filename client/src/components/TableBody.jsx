@@ -4,12 +4,15 @@ import React from "react";
 function TableBody({ products, setEditInfo, userId, setRefetch }) {
   const handleSubmit = async (id) => {
     try {
-      await axios.delete("http://localhost:80/api/product.php", {
-        data: {
-          user_id: userId,
-          id: id,
-        },
-      });
+      await axios.delete(
+        "https://protechttaskapi.000webhostapp.com/product.php",
+        {
+          data: {
+            user_id: userId,
+            id: id,
+          },
+        }
+      );
       setRefetch((prev) => !prev);
     } catch (err) {
       console.error(err);
