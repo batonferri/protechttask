@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     const { data } = await axios.post(
-      "https://protechttaskapi.000webhostapp.com/login.php",
+      "http://localhost:80/api/login.php",
       inputs
     );
     localStorage.setItem("userInfo", JSON.stringify(data.userInfo));
